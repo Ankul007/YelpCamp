@@ -4,9 +4,11 @@
 <head>
     <title>YelpCamp</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/app.css"></link>
 </head>
 
 <body>
+    
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -14,15 +16,19 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
+                   <% if(!currentuser){ %>
                     <li>
-                        <a href="/">Login</a>
+                        <a href="/login">Login</a>
                     </li>
                     <li>
-                        <a href="/">sign up</a>
+                        <a href="/register">sign up</a>
                     </li>
+                    <% } else { %>
+                    <li><a> Signed In as <%= currentuser.username %></a>  </li>
                     <li>
-                        <a href="/">Logout</a>
+                        <a href="/logout">Logout</a>
                     </li>
+                    <% } %>
                 </ul>
     
             </div>
