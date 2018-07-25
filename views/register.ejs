@@ -1,8 +1,9 @@
-<% include partials/header %>
- <form action="/register" method="POST">
+<% include ./partials/header %> 
+<h1>Sign Up!</h1>
 
-    <input type="text" placeholder="Username" name="username" />
-    <input type="password" placeholder="**********" name="password" />
-    <button type="submit"> Sign Up</button>
- </form>
-<% include partials/footer %>
+<form action="/register" method="post">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <button>Sign Up</button>
+</form>
+<% include ./partials/footer %> 

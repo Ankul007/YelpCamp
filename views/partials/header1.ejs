@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>YelpCamp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <style type="text/css">
+        body {
+            font-weight: bold;
+            background: url(https://images.unsplash.com/photo-1487730116645-74489c95b41b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=aa6e65fcad07b9a68420c430034f84f2&auto=format&fit=crop&w=750&q=80);
+            background-size: cover;
+    
+        }
+    
+        html {
+            height: 100%;
+        }
+    
+        #content {
+            text-align: center;
+            padding-top: 25%;
+            text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+            0px 8px 13px rgba(0, 0, 0, 0.1),
+            0px 18px 23px rgba(0, 0, 0, 0.1);
+        }
+    
+        h1 {
+            color: white;
+            font-weight: 700;
+            font-size: 5em;
+        }
+    
+        h3 {
+            color: white;
+        }
+    
+        hr {
+            border-top: 1px solid #f8f8f8;
+            border-bottom: 0.5px solid gray;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">YelpCamp</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <% if(!currentUser){ %>
+                        <li>
+                            <a href="/login">Login</a>
+                        </li>
+                        <li>
+                            <a href="/register">Sign Up</a>
+                        </li>
+                        <% } else { %>
+                            <li>
+                                <a href="#">Signed In As
+                                    <%= currentUser.username %>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/logout">Logout</a>
+                            </li>
+                            <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
