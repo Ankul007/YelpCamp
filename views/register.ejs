@@ -1,9 +1,20 @@
 <% include ./partials/header %> 
 <h1>Sign Up!</h1>
+<div class="container" align="center">
+    <h1 action="/register">Register new Account</h1>
 
-<form action="/register" method="post">
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="password" placeholder="password">
-    <button>Sign Up</button>
-</form>
-<% include ./partials/footer %> 
+    <form method="POST">
+        <div class="container">
+            <div class="form-group">
+                <label for="input3">UserName</label>
+                <input type="text" class="form-control" id="input3" placeholder="Alex_123" name="username">
+            </div>
+            <div class="form-group">
+                <label for="input4">Password</label>
+                <input type="password" class="form-control" id="input4" placeholder="Password" name="password">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+    </form>
+</div>
+ include ./partials/footer %> 
